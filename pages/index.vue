@@ -3,7 +3,7 @@
 
 <template>
   <div class="h-screen w-screen">
-    <a-button>
+    <a-button type="primary" danger>
       {{ $t('title') }}
     </a-button>
   </div>

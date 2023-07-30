@@ -4,16 +4,28 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: 'hs.weird from HU$TLANG',
+      title: process.env['APP_NAME'],
       meta: [
-        { name: 'description', content: 'Nuxt 3' }
+        { name: 'description', content: 'Nuxt 3' },
+        { name: 'fb:app_id', content: '' },
+        { name: 'og:title', content: process.env['APP_NAME'] },
+        { name: 'og:url', content: process.env['NUXT_PUBLIC_SITE_URL'] },
+        { name: 'og:image', content: '' },
+        { name: 'twitter:title', content: process.env['APP_NAME'] },
+        { name: 'twitter:description', content: '' },
+        { name: 'twitter:card', content: '' },
+        {
+          name:
+            'twitter:image',
+          content: ''
+        }
       ],
       link: []
     }
   },
   nitro: {
     preset: 'node-server',
-    compressPublicAssets: { gzip: true, brotli: true }
+    compressPublicAssets: true
   },
   devServer: {
     host: '0.0.0.0',
