@@ -32,8 +32,16 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    'nuxt-seo-experiments',
+    'nuxt-simple-sitemap',
+    'nuxt-og-image',
+    'nuxt-simple-robots'
   ],
+  site: {
+    url: process.env['NUXT_PUBLIC_SITE_URL']
+  },
+  robots: {},
   pinia: {
     autoImports: [
       'defineStore'
