@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
   devServer: {
     host: '0.0.0.0',
-    port: Number(process.env['PORT']) || 8000
+    port: Number(process.env.PORT) || 8000
   },
   typescript: {
     tsConfig: {
@@ -26,20 +26,17 @@ export default defineNuxtConfig({
       }
     }
   },
+  ssr: true,
   css: [
-    '@/assets/styles/index.scss',
+    '@/assets/styles/index.scss'
   ],
   modules: [
-      '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
   ],
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
-    },
+  pinia: {
+    autoImports: [
+      'defineStore'
+    ]
   }
 })
