@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
-    preset: 'node',
+    preset: 'node-server',
     compressPublicAssets: { gzip: true, brotli: true }
   },
   devServer: {
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-seo-experiments',
-    'nuxt-simple-sitemap',
+    // 'nuxt-simple-sitemap',
     'nuxt-og-image',
     'nuxt-simple-robots',
     '@nuxtjs/i18n'
@@ -51,5 +51,10 @@ export default defineNuxtConfig({
     autoImports: [
       'defineStore'
     ]
-  }
+  },
+  runtimeConfig: {
+    public: {
+      API_URL: process.env['API_URL'] || ''
+    }
+  },
 })

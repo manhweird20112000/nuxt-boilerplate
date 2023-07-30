@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { setStorage } from '~/utils/storage'
-
-setStorage()
 </script>
 
 <template>
