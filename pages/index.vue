@@ -2,13 +2,9 @@
 </script>
 
 <template>
-  <div class="h-screen w-screen">
-    <a-button type="primary" danger>
-      {{ $t('title') }}
-    </a-button>
+  <div class="flex h-screen w-screen items-center justify-center">
+    <h1 class="text-6xl font-bold">
+      H$.WEIRD
+    </h1>
   </div>
 </template>
-
-<style scoped>
-
-</style>
