@@ -5,6 +5,8 @@ import { defineConfig } from 'vite'
 import type { UserConfig } from 'vite'
 
 import AutoImport from 'unplugin-auto-import/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 
 import type { InlineConfig } from 'vitest'
 
@@ -15,7 +17,14 @@ interface VitestConfigExport extends UserConfig {
 export default defineConfig({
   plugins: [
     Vue(),
-    AutoImport({ imports: ['vue'], dts: 'src/types/auto-imports.d.ts' })
+    AutoImport({ imports: ['vue'], dts: 'types/auto-imports.d.ts' }),
+    Components({
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: false // css in js
+        })
+      ]
+    })
   ],
   test: {
     global: true,

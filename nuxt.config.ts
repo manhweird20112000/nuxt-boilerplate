@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   modules: [
+    '@ant-design-vue/nuxt',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-seo-experiments',
@@ -56,5 +57,5 @@ export default defineNuxtConfig({
     public: {
       API_URL: process.env['API_URL'] || ''
     }
-  },
+  }
 })

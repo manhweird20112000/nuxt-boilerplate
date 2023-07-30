@@ -2,10 +2,10 @@
 </script>
 
 <template>
-  <div class="h-screen w-screen bg-primary">
-    <p>
+  <div class="h-screen w-screen">
+    <a-button>
       {{ $t('title') }}
-    </p>
+    </a-button>
   </div>
 </template>
 
