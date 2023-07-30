@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
   },
   devServer: {
     host: '0.0.0.0',
-    port: Number(process.env.PORT) || 8000
+    port: Number(process.env['PORT']) || 8000
   },
   typescript: {
     tsConfig: {
@@ -36,8 +37,12 @@ export default defineNuxtConfig({
     'nuxt-seo-experiments',
     'nuxt-simple-sitemap',
     'nuxt-og-image',
-    'nuxt-simple-robots'
+    'nuxt-simple-robots',
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    vueI18n: './i18n/index.ts'
+  },
   site: {
     url: process.env['NUXT_PUBLIC_SITE_URL']
   },

@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { setStorage } from '~/utils/storage'
 
+setStorage()
 </script>
 
 <template>
   <div class="h-screen w-screen bg-primary">
-    <p class="text-primary">
-      Text
+    <p>
+      {{ $t('title') }}
     </p>
   </div>
 </template>
