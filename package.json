@@ -44,7 +44,10 @@
   "dependencies": {
     "@ant-design-vue/nuxt": "^1.0.1",
     "@ant-design/icons-vue": "^6.1.0",
+    "@metamask/detect-provider": "^2.0.0",
     "@pinia/nuxt": "^0.4.11",
+    "@walletconnect/ethereum-provider": "^2.10.0",
+    "@walletconnect/modal": "^2.6.1",
     "ant-design-vue": "4.x",
     "js-cookie": "^3.0.5",
     "pinia": "^2.1.6"
