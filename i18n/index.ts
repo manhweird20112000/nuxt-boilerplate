@@ -16,5 +16,17 @@ export default defineI18nConfig(() => ({
   },
   messages: {
     en, vi
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'vi',
+        iso: 'vi-VN'
+      }
+    ]
   }
 }))

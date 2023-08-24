@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         { name: 'fb:app_id', content: '' },
         { name: 'og:title', content: process.env['APP_NAME'] },
         { name: 'og:url', content: process.env['NUXT_PUBLIC_SITE_URL'] },
-        { name: 'og:image', content: '' },
+        { name: 'og:image', content: '/favicon.ico' },
         { name: 'twitter:title', content: process.env['APP_NAME'] },
         { name: 'twitter:description', content: '' },
         { name: 'twitter:card', content: '' },
@@ -51,7 +51,8 @@ export default defineNuxtConfig({
     // 'nuxt-simple-sitemap',
     'nuxt-og-image',
     'nuxt-simple-robots',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    'nuxt-jsonld'
   ],
   i18n: {
     vueI18n: './i18n/index.ts'

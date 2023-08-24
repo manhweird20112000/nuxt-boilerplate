@@ -50,6 +50,7 @@
     "@walletconnect/modal": "^2.6.1",
     "ant-design-vue": "4.x",
     "js-cookie": "^3.0.5",
+    "nuxt-jsonld": "^2.0.8",
     "pinia": "^2.1.6"
   }
 }
