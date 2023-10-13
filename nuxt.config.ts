@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     '@ant-design-vue/nuxt',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-seo-experiments',
+    // 'nuxt-seo-experiments',
     // 'nuxt-simple-sitemap',
     'nuxt-og-image',
     'nuxt-simple-robots',
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
     vueI18n: './i18n/index.ts'
   },
   site: {
-    url: process.env['NUXT_PUBLIC_SITE_URL']
+    url: process.env['NUXT_PUBLIC_SITE_URL'] || ''
   },
   robots: {},
   pinia: {
