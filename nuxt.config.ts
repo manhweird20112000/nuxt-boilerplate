@@ -45,14 +45,24 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    'nuxt-simple-sitemap',
+    '@nuxtjs/sitemap',
     'nuxt-og-image',
     'nuxt-simple-robots',
     '@nuxtjs/i18n',
     'nuxt-jsonld'
   ],
   i18n: {
-    vueI18n: './i18n/index.ts'
+    vueI18n: './i18n/index.ts',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'vi',
+        iso: 'vi-VN'
+      }
+    ]
   },
   site: {
     url: process.env['NUXT_PUBLIC_SITE_URL'] || ''

@@ -11,22 +11,10 @@ export default defineI18nConfig(() => ({
   lazy: true,
   detectBrowserLanguage: {
     useCookie: true,
-    cookieKey: 'i18n_redirected', // can change
+    cookieKey: KEY_LANGUAGE, // can change
     redirectOn: 'root'
   },
   messages: {
     en, vi
-  },
-  i18n: {
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US'
-      },
-      {
-        code: 'vi',
-        iso: 'vi-VN'
-      }
-    ]
   }
 }))
