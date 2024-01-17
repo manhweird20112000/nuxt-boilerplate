@@ -8,10 +8,9 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Nuxt 3' },
         { name: 'fb:app_id', content: '' },
-        { name: 'og:title', content: process.env['APP_NAME'] },
-        { name: 'og:url', content: process.env['NUXT_PUBLIC_SITE_URL'] },
+
         { name: 'og:image', content: '/favicon.ico' },
-        { name: 'twitter:title', content: process.env['APP_NAME'] },
+
         { name: 'twitter:description', content: '' },
         { name: 'twitter:card', content: '' },
         {
@@ -44,11 +43,9 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   modules: [
-    '@ant-design-vue/nuxt',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    // 'nuxt-seo-experiments',
-    // 'nuxt-simple-sitemap',
+    'nuxt-simple-sitemap',
     'nuxt-og-image',
     'nuxt-simple-robots',
     '@nuxtjs/i18n',

@@ -6,8 +6,5 @@
     <h1 class="text-6xl font-bold">
       H$.WEIRD
     </h1>
-    <a-button type="primary" danger>
-      Click
-    </a-button>
   </div>
 </template>

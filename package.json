@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "author": "manhdv",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -29,7 +30,6 @@
     "eslint-plugin-vue": "^9.16.0",
     "nuxt": "^3.7.4",
     "nuxt-og-image": "^2.0.11",
-    "nuxt-seo-experiments": "^3.0.7",
     "nuxt-simple-robots": "^3.0.3",
     "nuxt-simple-sitemap": "^3.1.1",
     "postcss": "^8.4.27",
@@ -42,13 +42,10 @@
     "vitest": "^0.33.0"
   },
   "dependencies": {
-    "@ant-design-vue/nuxt": "^1.0.1",
-    "@ant-design/icons-vue": "^6.1.0",
     "@metamask/detect-provider": "^2.0.0",
     "@pinia/nuxt": "^0.4.11",
     "@walletconnect/ethereum-provider": "^2.10.0",
     "@walletconnect/modal": "^2.6.1",
-    "ant-design-vue": "4.x",
     "js-cookie": "^3.0.5",
     "nuxt-jsonld": "^2.0.8",
     "pinia": "^2.1.6"
