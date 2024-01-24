@@ -1,6 +1,7 @@
 import { $fetch } from 'ofetch'
 
 import type { RequestType } from './types'
+import type { RuntimeConfig } from 'nuxt/schema'
 
 export const request = async (config: RequestType) => {
   const {
@@ -12,8 +13,8 @@ export const request = async (config: RequestType) => {
     data
   } = config
 
-  const env = useRuntimeConfig()
-  const baseURL: any = env.public['API_URL']
+  const env: RuntimeConfig = useRuntimeConfig()
+  const baseURL: string = env.public['API_URL'] || ''
 
   const headers: Record<string, any> = {
     Authorization: 'Bearer ',
@@ -27,12 +28,12 @@ export const request = async (config: RequestType) => {
   }
 
   headers['Content-Type'] = isUploadFile ? 'multipart/form-data' : 'application/json'
-
   return await new Promise((resolve, reject) => {
     $fetch(url, {
       baseURL,
       headers,
       method,
+      timeout: 5000,
       responseType: isDownloadFile ? 'blob' : 'json',
       body: data,
       ...options

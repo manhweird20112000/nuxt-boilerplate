@@ -20,7 +20,9 @@ export default defineNuxtConfig({
         }
       ],
       link: []
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
   nitro: {
     preset: 'node-server',
@@ -43,6 +45,8 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   modules: [
+    '@nuxtjs/critters',
+    '@element-plus/nuxt',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
@@ -51,6 +55,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-jsonld'
   ],
+  build: {
+    transpile: []
+  },
   i18n: {
     vueI18n: './i18n/index.ts',
     locales: [
@@ -68,6 +75,11 @@ export default defineNuxtConfig({
     url: process.env['NUXT_PUBLIC_SITE_URL'] || ''
   },
   robots: {},
+  critters: {
+    config: {
+      preload: 'swap'
+    }
+  },
   pinia: {
     autoImports: [
       'defineStore'
